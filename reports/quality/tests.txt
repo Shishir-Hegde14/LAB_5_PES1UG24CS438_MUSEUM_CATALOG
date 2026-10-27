@@ -1,0 +1,12 @@
+test_backup_notice (test_museum_catalog.CatalogTests.test_backup_notice) ... ok
+test_import_has_no_demo_side_effects (test_museum_catalog.CatalogTests.test_import_has_no_demo_side_effects) ... ok
+test_initial_display_flag (test_museum_catalog.CatalogTests.test_initial_display_flag) ... ok
+test_missing_artifact_has_clear_error (test_museum_catalog.CatalogTests.test_missing_artifact_has_clear_error) ... ok
+test_quoted_and_sql_like_titles_are_literal_data (test_museum_catalog.CatalogTests.test_quoted_and_sql_like_titles_are_literal_data) ... ok
+test_storage_to_display_transition (test_museum_catalog.CatalogTests.test_storage_to_display_transition) ... ok
+test_totals_filter_by_era_and_handle_no_matches (test_museum_catalog.CatalogTests.test_totals_filter_by_era_and_handle_no_matches) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.081s
+
+OK
