@@ -28,3 +28,10 @@ Additional observations from manual inspection, separate from tool findings:
   `TypeError`. Return a clear `ValueError` for an unknown ID.
 - Importing the module runs the demonstration. Add a main guard so importing
   functions does not add sample artifacts or print output.
+
+## Final status
+
+All findings listed above have been addressed. The final script scores
+10.00/10 in Pylint, has no Bandit findings, and has no Flake8 violations.
+No checks were disabled. Both manual observations were also addressed, and
+all seven regression tests pass. Final evidence is in `reports/after/`.

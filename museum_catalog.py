@@ -21,7 +21,9 @@ def add_artifact(title, era, value, on_display=0):
 
 def display_status(artifact_id):
     """Return display status, raising ValueError for an unknown artifact."""
-    row = conn.execute("SELECT on_display FROM artifacts WHERE id = ?", (artifact_id,)).fetchone()
+    row = conn.execute(
+        "SELECT on_display FROM artifacts WHERE id = ?", (artifact_id,)
+    ).fetchone()
     if row is None:
         raise ValueError(f"Unknown artifact ID: {artifact_id}")
     if row[0] == 1:
@@ -29,18 +31,21 @@ def display_status(artifact_id):
     return "in storage"
 
 
-
 def total_value(era):
     """Sum the values of artifacts from the requested era."""
-    total=0
-    for (value,) in conn.execute("SELECT value FROM artifacts WHERE era = ?", (era,)):
+    total = 0
+    for (value,) in conn.execute(
+        "SELECT value FROM artifacts WHERE era = ?", (era,)
+    ):
         total += value
     return total
 
 
 def move_to_display(artifact_id):
     """Move an artifact onto display."""
-    conn.execute("UPDATE artifacts SET on_display = 1 WHERE id = ?", (artifact_id,))
+    conn.execute(
+        "UPDATE artifacts SET on_display = 1 WHERE id = ?", (artifact_id,)
+    )
     conn.commit()
 
 
